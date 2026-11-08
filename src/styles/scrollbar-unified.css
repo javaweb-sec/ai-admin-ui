@@ -1,0 +1,69 @@
+/* Simplified global scrollbar styles - Green theme with Light/Dark mode */
+/* High priority - using !important to override other styles */
+
+/* ============================================
+   LIGHT MODE - Softer green (40% opacity)
+   ============================================ */
+* {
+  /* Firefox */
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(34, 197, 94, 0.4) rgba(34, 197, 94, 0.1) !important;
+}
+
+/* WebKit browsers - Light mode */
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border-radius: 10px !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.4) !important;
+  border-radius: 10px !important;
+  transition: background 0.3s ease !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.6) !important;
+}
+
+/* ============================================
+   DARK MODE - Vibrant green (70% opacity)
+   ============================================ */
+.dark * {
+  scrollbar-color: rgba(34, 197, 94, 0.7) rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.7) !important;
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.9) !important;
+}
+
+/* Mobile adaptation */
+@media (max-width: 768px) {
+  *::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+  }
+}
+
+/* Utility class to hide scrollbar */
+.scrollbar-hidden {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none !important;
+}
