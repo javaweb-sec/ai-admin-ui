@@ -58,7 +58,7 @@
     "react-hook-form": "^7.53.0",
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^7.18.5",
-    "recharts": "^2.15.3",
+    "recharts": "^3.10.1",
     "rehype-sanitize": "^6.0.0",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
