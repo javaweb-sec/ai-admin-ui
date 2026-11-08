@@ -24,7 +24,7 @@ export default function Profile() {
         title="个人资料"
         description="维护你的基本信息和个人头像，保存后同步到顶部账户入口。"
       />
-      <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
+      <div className="profile-layout grid min-w-0 grid-cols-1 gap-6">
         <Card>
           <CardContent className="flex flex-col items-center p-8 text-center">
             <div className="mb-4 rounded-2xl bg-primary/10 p-5 text-primary">

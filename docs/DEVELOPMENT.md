@@ -43,3 +43,9 @@
 依赖安全更新将 Vite / React Router / Vitest 升级到当前兼容版本。`package.json` 中的 `postcss-selector-parser` override 将传递依赖统一到修复后的 6.x，待上游无需覆盖时再移除；升级后运行完整检查。
 
 登录页采用居中玻璃卡片、紫蓝渐变与粒子背景。“记住账号”只将用户名保存到 `ai-admin-ui:remembered-account`，不会保存密码。
+
+## 页面宽度与响应式布局
+
+后台 `.admin-content` 使用全宽流式布局，不设置全局 max-width。页面内允许搜索框或弹窗保留适宜的最大宽度，但不能用固定宽度限制整个业务页面。
+
+卡片、表格和网格项设置 `min-width: 0`，宽表格在自己的容器中横向滚动。仪表盘、个人资料、组件示例、角色及文章编辑布局通过 CSS container queries 按实际内容区宽度分栏，因此侧栏折叠后也能重新排版。新增同类页面应复用 `responsive-card-grid` 等布局类；检查大屏、手机及侧栏展开/收起状态。

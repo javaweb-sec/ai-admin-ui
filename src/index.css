@@ -632,3 +632,46 @@
     opacity: 0;
   }
 }
+
+/* Breakpoints follow available content width, including sidebar changes. */
+.admin-content {
+  container-type: inline-size;
+}
+.admin-content > * {
+  min-width: 0;
+}
+@container (min-width: 480px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container (min-width: 720px) {
+  .responsive-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .profile-layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+}
+@container (min-width: 960px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .dashboard-panels {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .dashboard-chart {
+    grid-column: span 2;
+  }
+  .article-editor-grid {
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+}
+@container (min-width: 1440px) {
+  .responsive-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .article-editor-grid {
+    grid-template-columns: minmax(0, 1fr) 360px;
+  }
+}

@@ -166,7 +166,10 @@ export default function Components() {
           <TabsTrigger value="overlays">弹层与反馈</TabsTrigger>
           <TabsTrigger value="data">数据与布局</TabsTrigger>
         </TabsList>
-        <TabsContent value="basics" className="grid gap-6 lg:grid-cols-2">
+        <TabsContent
+          value="basics"
+          className="responsive-card-grid grid min-w-0 grid-cols-1 gap-6"
+        >
           <Demo
             title="按钮 Button"
             description="主要、次要、描边、危险、幽灵及链接操作。"
@@ -406,7 +409,10 @@ export default function Components() {
             </div>
           </Demo>
         </TabsContent>
-        <TabsContent value="overlays" className="grid gap-6 lg:grid-cols-2">
+        <TabsContent
+          value="overlays"
+          className="responsive-card-grid grid min-w-0 grid-cols-1 gap-6"
+        >
           <Demo
             title="对话框 Dialog"
             description="带输入、提交和关闭行为的标准编辑弹窗。"
@@ -615,7 +621,10 @@ export default function Components() {
             </Alert>
           </Demo>
         </TabsContent>
-        <TabsContent value="data" className="grid gap-6 lg:grid-cols-2">
+        <TabsContent
+          value="data"
+          className="responsive-card-grid grid min-w-0 grid-cols-1 gap-6"
+        >
           <Demo
             title="数据表格 Table"
             description="搜索、状态标签与空结果展示。"

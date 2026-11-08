@@ -355,7 +355,7 @@ const ArticleEditorPage: React.FC = () => {
     <>
       <div className="flex min-w-0 flex-col gap-4 md:gap-6">
         <div className="shrink-0">
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 min-w-0">
             <Button
               variant="ghost"
               size="sm"
@@ -416,7 +416,7 @@ const ArticleEditorPage: React.FC = () => {
           </div>
         ) : (
           <div className="min-w-0">
-            <div className="grid min-w-0 grid-cols-1 items-start gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
+            <div className="article-editor-grid grid min-w-0 grid-cols-1 items-start gap-4">
               <Card className="min-w-0">
                 <CardContent className="min-w-0 space-y-4 pt-6">
                   <div className="space-y-1.5">

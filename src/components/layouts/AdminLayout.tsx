@@ -109,7 +109,7 @@ export default function AdminLayout() {
           </Sheet>
           <div className="flex min-w-0 flex-1 flex-col">
             <header className="admin-header flex h-20 shrink-0 items-center justify-between gap-3 bg-transparent px-4 md:px-8">
-              <div className="flex items-center gap-3">
+              <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -123,14 +123,14 @@ export default function AdminLayout() {
                   aria-hidden="true"
                   className="h-5 w-5 shrink-0 text-primary"
                 />
-                <span className="text-sm text-muted-foreground">
+                <span className="min-w-0 truncate text-sm text-muted-foreground">
                   {isArticleEditor
                     ? "文章管理"
                     : currentPage?.group || "工作空间"}{" "}
                   / <span className="text-foreground">{title}</span>
                 </span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex shrink-0 items-center gap-0 sm:gap-2">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -160,8 +160,8 @@ export default function AdminLayout() {
                 </Button>
               </div>
             </header>
-            <main className="admin-main min-h-0 flex-1 overflow-auto bg-muted/30 p-4 md:p-8">
-              <div className="mx-auto max-w-7xl space-y-6 animate-fade-in">
+            <main className="admin-main min-h-0 min-w-0 flex-1 overflow-auto bg-muted/30 p-4 md:p-6 xl:p-8">
+              <div className="admin-content w-full min-w-0 space-y-6 animate-fade-in">
                 <Suspense fallback={null}>
                   <Outlet />
                 </Suspense>

@@ -49,7 +49,7 @@ export default function Roles() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="responsive-card-grid grid min-w-0 grid-cols-1 gap-5">
         {filtered.map((role) => (
           <Card key={role.id}>
             <CardHeader>

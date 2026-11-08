@@ -1,14 +1,40 @@
 # AI Admin UI
 
-基于 React、TypeScript 与 shadcn UI 的通用后台管理模板，包含文章管理、系统管理、通知和可交互组件示例。开箱即用，无需后端。
+基于 React、TypeScript 与 shadcn UI 的通用后台管理模板，提供响应式布局、深浅色主题、Markdown 文章管理、系统管理与通知中心。使用本地演示数据，安装依赖即可运行，无需启动后端。
+
+[快速开始](#快速开始) · [界面预览](#界面预览) · [功能](#功能) · [开发指南](docs/DEVELOPMENT.md) · [部署说明](docs/DEPLOYMENT.md)
 
 > 当前是本地演示模板：登录、角色配置和“发布”操作不提供生产服务端能力。详细边界见 [安全说明](SECURITY.md)。
+
+## 界面预览
+
+### 登录页
+
+居中玻璃卡片搭配渐变与粒子背景，支持密码显隐、记住账号和主题切换。
+
+![AI Admin UI 登录页：居中登录卡片、紫色渐变按钮与粒子背景](docs/images/login.png)
+
+### 后台 · 深色主题
+
+冷黑背景与绿色强调色，结合层级菜单、统计卡片和访问趋势图。
+
+![AI Admin UI 深色仪表盘：层级菜单、统计卡片与访问趋势](docs/images/dashboard-dark.png)
+
+### 后台 · 浅色主题
+
+浅色背景与柔和卡片阴影，与深色主题共享布局和交互。
+
+![AI Admin UI 浅色仪表盘：绿色导航选中态与自适应内容区](docs/images/dashboard-light.png)
+
+截图中的统计值均为演示数据。图片保存在仓库的 `docs/images/` 中，无需依赖外部图床。
 
 ## 快速开始
 
 推荐 Node.js 22（最低 22.12），使用 npm 与仓库内的 lockfile。
 
 ```bash
+git clone https://github.com/javaweb-sec/ai-admin-ui.git
+cd ai-admin-ui
 npm ci
 npm run dev
 ```
@@ -20,7 +46,7 @@ npm run dev
 | 模块       | 内容                                                              |
 | ---------- | ----------------------------------------------------------------- |
 | 工作空间   | 仪表盘、图表、统计卡片                                            |
-| 布局与主题 | 深浅色/跟随系统、响应式侧栏、分组折叠与本地记忆                   |
+| 布局与主题 | 深浅色/跟随系统、全宽自适应布局、层级侧栏、折叠状态记忆           |
 | 文章管理   | 搜索筛选分页、分类层级与图标、新增/编辑、置顶、状态切换、批量删除 |
 | Markdown   | 实时预览、代码高亮、表格列表、图片链接、自动草稿恢复              |
 | 系统管理   | 个人资料、用户列表示例、角色与权限配置、外观设置                  |
@@ -48,6 +74,10 @@ React 18 · TypeScript · Vite · Tailwind CSS · shadcn UI / Radix UI · Zustan
 ## 项目结构
 
 ```text
+docs/
+  images/              登录页与后台截图
+  DEVELOPMENT.md       开发与组件规范
+  DEPLOYMENT.md        部署说明
 src/
   components/ui/       shadcn/Radix 基础组件
   components/layouts/  后台布局

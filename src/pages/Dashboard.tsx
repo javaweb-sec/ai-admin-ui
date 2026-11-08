@@ -24,7 +24,7 @@ export default function Dashboard() {
           欢迎回来，这里是你的工作概览。以下均为演示数据。
         </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="dashboard-stats grid grid-cols-1 gap-4">
         {[
           { label: "用户总数", value: "1,280", icon: Users },
           { label: "本周访问", value: "8,640", icon: Activity },
@@ -45,8 +45,8 @@ export default function Dashboard() {
           </Card>
         ))}
       </div>
-      <div className="grid gap-6 xl:grid-cols-3">
-        <Card className="min-w-0 xl:col-span-2">
+      <div className="dashboard-panels grid grid-cols-1 gap-6">
+        <Card className="dashboard-chart min-w-0">
           <CardHeader>
             <CardTitle className="text-base">访问趋势</CardTitle>
           </CardHeader>
